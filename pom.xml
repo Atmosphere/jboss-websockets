@@ -59,7 +59,7 @@
 
             <!-- Use the locally compiled snapshot for now
                  TODO: don't hard code this.-->
-            <version>7.1.0.Alpha1-SNAPSHOT</version>
+            <version>7.1.1.Final</version>
             <scope>provided</scope>
         </dependency>
 
