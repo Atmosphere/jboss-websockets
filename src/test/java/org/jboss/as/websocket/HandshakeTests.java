@@ -1,6 +1,6 @@
 package org.jboss.as.websocket;
 
-import org.jboss.websockets.oio.internal.protocol.ietf00.Hybi00Handshake;
+import org.atmosphere.jboss.websockets.oio.internal.protocol.ietf00.Hybi00Handshake;
 import org.junit.Test;
 
 /**

@@ -18,9 +18,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>5</version>
+    </parent>
 
-    <groupId>org.jboss.as</groupId>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.atmosphere.jboss.as</groupId>
     <artifactId>jboss-as-websockets</artifactId>
     <version>0.2.Alpha1</version>
     <name>WebSockets for JBoss AS</name>
@@ -42,9 +47,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:mikebrock/jboss-websockets.git</connection>
-        <developerConnection>scm:git:git@github.com:mikebrock/jboss-websockets.git</developerConnection>
-        <url>scm:git:git@github.com:mikebrock/jboss-websockets.git</url>
+        <connection>scm:git:git@github.com:Atmosphere/jboss-websockets.git</connection>
+        <developerConnection>scm:git:git@github.com:Atmosphere/jboss-websockets.git</developerConnection>
+        <url>scm:git:git@github.com:Atmosphere/jboss-websockets.git</url>
     </scm>
 
     <dependencies>
@@ -131,16 +136,17 @@
     <!-- DistributionManagement -->
     <distributionManagement>
         <repository>
-            <id>jboss-releases-repository</id>
-            <name>JBoss Releases Repository</name>
-            <url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/</url>
+            <id>sonatype-nexus-staging</id>
+            <name>Sonatype Release</name>
+            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2</url>
         </repository>
-
         <snapshotRepository>
-            <id>jboss-snapshots-repository</id>
-            <name>JBoss Snapshots Repository</name>
-            <url>https://repository.jboss.org/nexus/content/repositories/snapshots/</url>
+            <id>sonatype-nexus-snapshots</id>
+            <name>sonatype-nexus-snapshots</name>
+            <url>${distMgmtSnapshotsUrl}</url>
         </snapshotRepository>
     </distributionManagement>
-
+    <properties>
+        <distMgmtSnapshotsUrl>http://oss.sonatype.org/content/repositories/snapshots</distMgmtSnapshotsUrl>
+    </properties>
 </project>

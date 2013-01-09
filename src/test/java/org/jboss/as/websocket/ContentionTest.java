@@ -1,6 +1,6 @@
 package org.jboss.as.websocket;
 
-import org.jboss.websockets.oio.internal.util.Hash;
+import org.atmosphere.jboss.websockets.oio.internal.util.Hash;
 import org.junit.Test;
 
 import java.util.concurrent.Executors;
