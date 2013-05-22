@@ -255,10 +255,7 @@ public class Hybi13Socket extends AbstractWebSocket {
         closeSocket();
         return CloseFrame.get();
     }
-    //throw new IOException("unknown frame type");
-	System.out.println("Hybi13Socket.readFrame(): Unknown Frame Type - Closing Socket");
-	closeSocket();
-    return CloseFrame.get();
+    throw new IOException("unknown frame type");
   }
 
   public void writeFrame(Frame frame) throws IOException {
